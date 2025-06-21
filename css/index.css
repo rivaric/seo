@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 60px 100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.header__logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header__logo img {
+  transition: 
+    transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.header__logo img:hover {
+  transform: scale(1.12) rotate(360deg);
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__nav > ul {
+  display: flex;
+  gap: 40px;
+}
+
+.header__button {
+  border: 1px solid #000;
+  border-radius: 14px;
+  padding: 20px 35px;
+}
+
+.home__title {
+  font-weight: 500;
+  font-size: 60px;
+  margin-bottom: 35px;
+}
+
+.home__description {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.home__content {
+  display: flex;
+  gap: 108px;
+  margin-bottom: 70px;
+}
+
+.home__button {
+  border-radius: 14px;
+  padding: 20px 35px;
+  background: #000;
+  color: #fff;
+}
+
+.home__logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* === Анимация для кнопок === */
+button,
+.header__button,
+.home__button {
+  transition: 
+    background 0.3s cubic-bezier(.4,0,.2,1),
+    color 0.3s cubic-bezier(.4,0,.2,1),
+    transform 0.2s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+button:hover,
+.header__button:hover,
+.home__button:hover {
+  background: #ccff66;
+  color: #222;
+  transform: scale(1.06);
+  box-shadow: 0 4px 24px rgba(204,255,102,0.15);
+}
+
+.header__nav ul li a {
+  position: relative;
+  color: #222;
+  transition: color 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.header__nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -3px;
+  height: 2px;
+  background: #a3e635;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.header__nav ul li a:hover {
+  color: #a3e635;
+}
+
+.header__nav ul li a:hover::after {
+  transform: scaleX(1);
+}

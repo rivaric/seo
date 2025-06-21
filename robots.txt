@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://positivus.example.com/sitemap.xml 
